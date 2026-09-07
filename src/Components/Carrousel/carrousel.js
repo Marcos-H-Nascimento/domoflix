@@ -5,7 +5,7 @@ import './carrousel.css';
 
 // passar o mouse e passar automaticamente o carrousel
 
-function Carrousel(prop) {
+function Carrousel({endpoint, SectionName}) {
     const [content, setContent] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -13,14 +13,14 @@ function Carrousel(prop) {
 
     useEffect(() => {
         async function loadContent() {
-            const response = await prop.endpoint();
+            const response = await endpoint();
 
             setContent(response.data.results);
             setLoading(false)
         }
 
         loadContent()
-    }, [prop.endpoint])
+    }, [endpoint])
 
     if (loading) {
         return (
@@ -47,7 +47,7 @@ function Carrousel(prop) {
 
     return (
         <div className="carrouselContainer">
-            <h2>{prop.SectionName}</h2>
+            <h2>{SectionName}</h2>
             <div className="slider">
 
                 <button className="leftArrow" onClick={scrollLeft}><i className="fa-solid fa-angle-left"></i></button>

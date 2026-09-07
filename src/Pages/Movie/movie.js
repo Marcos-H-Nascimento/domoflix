@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom"
+import { useParams} from "react-router-dom"
 import { useState, useEffect } from "react";
 
 import movies from "../../services/movies";
@@ -20,7 +20,7 @@ function Filmes() {
 
         loadMovieInfo(id)
 
-    }, []);
+    }, [id]);
 
     const { id } = useParams();
 
