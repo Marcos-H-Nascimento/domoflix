@@ -1,0 +1,24 @@
+.navegationBar{
+    height: 70px;
+    background-color: #090a09;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegationItems a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
