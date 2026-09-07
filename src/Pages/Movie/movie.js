@@ -9,6 +9,7 @@ import './movie.css'
 function Filmes() {
     const [movie, setMovie] = useState(null);
     const [loading, setLoading] = useState(true);
+    const { id } = useParams();
 
     useEffect(() => {
         async function loadMovieInfo(id) {
@@ -22,7 +23,6 @@ function Filmes() {
 
     }, [id]);
 
-    const { id } = useParams();
 
     if (loading) {
         return (
